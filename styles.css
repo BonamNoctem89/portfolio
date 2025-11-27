@@ -121,30 +121,28 @@ main {
   color: var(--text-secondary);
 }
 
-.gallery {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  align-items: stretch;
+.justified-gallery {
+  margin-top: 2rem;
 }
 
-.gallery__item {
-  background: #fff;
-  border-radius: 22px;
-  padding: 1.2rem;
+.justified-gallery > a {
+  border-radius: 18px;
+  overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery__item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 32px 60px rgba(15, 23, 42, 0.22);
+.justified-gallery img {
+  border-radius: 18px;
+  transition: transform 0.3s ease;
 }
 
-.gallery__item figcaption {
-  margin-top: 1rem;
-  font-weight: 500;
-  color: var(--text-primary);
+.justified-gallery a:hover img {
+  transform: scale(1.03);
+}
+
+.lb-data .lb-number,
+.lb-data .lb-caption {
+  font-family: 'Poppins', sans-serif;
 }
 
 .links {
