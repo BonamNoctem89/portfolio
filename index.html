@@ -92,11 +92,17 @@
 
     $(function () {
       $('#portfolio-gallery').justifiedGallery({
-        rowHeight: 180,
-        margins: 12,
+        rowHeight: 160,
+        maxRowHeight: 200,
+        margins: 10,
         captions: false,
         lastRow: 'nojustify',
         waitThumbnailsLoad: true
+      });
+
+      lightbox.option({
+        resizeDuration: 240,
+        wrapAround: true
       });
     });
   </script>

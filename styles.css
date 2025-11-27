@@ -124,7 +124,7 @@ main {
 
 .justified-gallery {
   margin: 2rem auto 0;
-  max-width: 1200px;
+  width: 100%;
 }
 
 .justified-gallery > a {
