@@ -90,11 +90,14 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    $('#portfolio-gallery').justifiedGallery({
-      rowHeight: 260,
-      margins: 16,
-      captions: false,
-      lastRow: 'nojustify'
+    $(function () {
+      $('#portfolio-gallery').justifiedGallery({
+        rowHeight: 180,
+        margins: 12,
+        captions: false,
+        lastRow: 'nojustify',
+        waitThumbnailsLoad: true
+      });
     });
   </script>
 </body>
