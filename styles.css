@@ -124,6 +124,24 @@ main {
 .gallery {
   max-width: 1200px;
   margin: 2rem auto 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 23, 42, 0.2) transparent;
+}
+
+.gallery::-webkit-scrollbar {
+  width: 10px;
+}
+
+.gallery::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 999px;
 }
 
 .gallery__link {
@@ -144,6 +162,10 @@ main {
 .gallery__link:focus .gallery__image {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.gallery .jg-row {
+  margin-bottom: 8px;
 }
 
 .links {
@@ -201,5 +223,9 @@ main {
   .hero__subtitle {
     letter-spacing: 0.3rem;
     font-size: 0.8rem;
+  }
+
+  .gallery {
+    max-height: 60vh;
   }
 }
