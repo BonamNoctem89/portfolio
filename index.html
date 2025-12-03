@@ -10,7 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" />
+
+  <!-- JustifiedGallery + Lightbox CSS -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"
+        referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" />
 </head>
 <body>
   <header class="hero">
@@ -59,135 +65,4 @@
            data-title="Dynamischer Sprint durch die Wiese">
           <img src="images/hangelstein_10_25/hemera_rennt_small.jpg"
                alt="Hund läuft über eine blühende Wiese"
-               class="gallery__image">
-        </a>
-
-        <a href="images/hangelstein_10_25/hemera_bank.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Verschnaufpause auf einer Waldbank">
-          <img src="images/hangelstein_10_25/hemera_bank_small.jpg"
-               alt="Hund liegt auf einer hölzernen Bank im Wald"
-               class="gallery__image">
-        </a>
-
-        <!-- Portrait -->
-        <a href="images/IMG_5356-2.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Weiches Portrait mit natürlichem Bokeh">
-          <img src="images/IMG_5356-2.jpg"
-               alt="Porträtfotografie mit weichem Hintergrund"
-               class="gallery__image">
-        </a>
-
-        <!-- Pilze & Landschaft -->
-        <a href="images/hangelstein_10_25/pilze1.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Zarte Pilze am Waldboden">
-          <img src="images/hangelstein_10_25/pilze1_small.jpg"
-               alt="Pilzgruppe zwischen Herbstlaub"
-               class="gallery__image">
-        </a>
-
-        <a href="images/hangelstein_10_25/pilze2.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Herbstliche Details im Moos">
-          <img src="images/hangelstein_10_25/pilze2_small.jpg"
-               alt="Pilze, die aus dem Moos wachsen"
-               class="gallery__image">
-        </a>
-
-        <a href="images/hangelstein_10_25/pilze3.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Makroaufnahme eines Waldpilzes">
-          <img src="images/hangelstein_10_25/pilze3_small.jpg"
-               alt="Nahaufnahme eines Pilzes im Wald"
-               class="gallery__image">
-        </a>
-
-        <a href="images/hangelstein_10_25/pilze4.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Stimmungsvolles Pilzquartett">
-          <img src="images/hangelstein_10_25/pilze4_small.jpg"
-               alt="Pilze auf einem mit Moos bedeckten Stamm"
-               class="gallery__image">
-        </a>
-
-        <a href="images/hangelstein_10_25/pilze5.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Pilze im sanften Gegenlicht">
-          <img src="images/hangelstein_10_25/pilze5_small.jpg"
-               alt="Pilze, die von warmem Licht angestrahlt werden"
-               class="gallery__image">
-        </a>
-
-        <a href="images/hangelstein_10_25/view_hangelstein.jpg"
-           class="gallery__link"
-           data-lightbox="portfolio"
-           data-title="Panoramablick über Hangelstein">
-          <img src="images/hangelstein_10_25/view_hangelstein_small.jpg"
-               alt="Panoramablick über Hügel und Wald"
-               class="gallery__image">
-        </a>
-      </div>
-    </section>
-
-    <!-- Professionelle Links -->
-    <section id="professional" class="section section--accent">
-      <div class="section__intro">
-        <h2>Professionelle Projekte</h2>
-        <p>
-          Verweise auf die Plattformen, auf denen deine im beruflichen Kontext erstellten Foto- und Videoarbeiten zu finden sind.
-        </p>
-      </div>
-
-      <div class="links">
-        <a class="links__card"
-           href="https://www.instagram.com/dein_account"
-           target="_blank"
-           rel="noreferrer noopener">
-          <span class="links__label">Instagram</span>
-          <span class="links__text">
-            Portfolio deiner aktuellen Kampagnen, Behind-the-Scenes und Reels.
-          </span>
-        </a>
-
-        <a class="links__card"
-           href="https://www.deineagenturwebsite.de"
-           target="_blank"
-           rel="noreferrer noopener">
-          <span class="links__label">Agentur-Website</span>
-          <span class="links__text">
-            Projektseite deiner Werksstudenten-Tätigkeit mit Foto- &amp; Videoreferenzen.
-          </span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>&copy; <span id="year"></span> Dein Name. Alle Rechte vorbehalten.</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"></script>
-  <script>
-    if (window.lightbox) {
-      lightbox.option({
-        resizeDuration: 200,
-        wrapAround: true
-      });
-    }
-  </script>
-</body>
-</html>
+               class="galle
