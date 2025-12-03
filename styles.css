@@ -125,34 +125,13 @@ main {
   max-width: 1200px;
   margin: 2rem auto 0;
 
-  /* NEU: 2 Reihen + horizontales Scrollen */
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(180px, 1fr);
-  grid-template-rows: repeat(2, 200px);
-  gap: 12px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 0.5rem;
-
-  scrollbar-width: thin;
-  scrollbar-color: rgba(15, 23, 42, 0.2) transparent;
-
-  scroll-snap-type: x mandatory;
+  /* WICHTIG: keine künstliche Höhenbegrenzung, kein overflow-y */
+  overflow: hidden;
 }
 
-.gallery::-webkit-scrollbar {
-  height: 10px;
-}
-
-.gallery::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.gallery::-webkit-scrollbar-thumb {
-  background: rgba(15, 23, 42, 0.15);
-  border-radius: 999px;
+/* Optional: etwas Luft zwischen den JustifiedGallery-Reihen */
+.gallery .jg-row {
+  margin-bottom: 8px;
 }
 
 /* Karten / Bilder */
@@ -160,8 +139,6 @@ main {
   display: block;
   overflow: hidden;
   border-radius: 12px;
-  scroll-snap-align: start;
-  height: 100%;
 }
 
 .gallery__image {
@@ -177,6 +154,7 @@ main {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
+
 
 .links {
   display: grid;
