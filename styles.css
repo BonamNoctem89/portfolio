@@ -10,6 +10,7 @@
 }
 
 /* Reset */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,7 +30,6 @@ body {
 img {
   max-width: 100%;
   display: block;
-  border-radius: 18px;
 }
 
 /* Hero */
@@ -131,15 +131,15 @@ main {
   color: var(--text-secondary);
 }
 
-/* Galerie – einfache Grid-Galerie mit Originalseitenverhältnissen */
+/* Galerie – JustifiedGallery Container
+   WICHTIG: kein display:grid / flex / max-height / overflow hier! */
 
 .gallery {
   max-width: 1200px;
   margin: 2rem auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
 }
+
+/* Einträge optisch leicht abrunden + Hover-Effekt, ohne das Layout von JustifiedGallery zu zerstören */
 
 .gallery__link {
   display: block;
@@ -149,7 +149,7 @@ main {
 
 .gallery__image {
   width: 100%;
-  height: auto;          /* Seitenverhältnis bleibt erhalten */
+  height: auto;
   border-radius: 16px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
