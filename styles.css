@@ -124,15 +124,26 @@ main {
 .gallery {
   max-width: 1200px;
   margin: 2rem auto 0;
-  max-height: 70vh;
-  overflow-y: auto;
-  padding-right: 0.25rem;
+
+  /* NEU: 2 Reihen + horizontales Scrollen */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180px, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 12px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+
   scrollbar-width: thin;
   scrollbar-color: rgba(15, 23, 42, 0.2) transparent;
+
+  scroll-snap-type: x mandatory;
 }
 
 .gallery::-webkit-scrollbar {
-  width: 10px;
+  height: 10px;
 }
 
 .gallery::-webkit-scrollbar-track {
@@ -144,10 +155,13 @@ main {
   border-radius: 999px;
 }
 
+/* Karten / Bilder */
 .gallery__link {
   display: block;
   overflow: hidden;
   border-radius: 12px;
+  scroll-snap-align: start;
+  height: 100%;
 }
 
 .gallery__image {
@@ -162,10 +176,6 @@ main {
 .gallery__link:focus .gallery__image {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-}
-
-.gallery .jg-row {
-  margin-bottom: 8px;
 }
 
 .links {
