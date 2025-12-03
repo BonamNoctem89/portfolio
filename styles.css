@@ -9,6 +9,7 @@
   font-size: 16px;
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +17,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--text-primary);
   background-color: var(--bg-light);
   line-height: 1.6;
@@ -31,6 +32,8 @@ img {
   border-radius: 18px;
 }
 
+/* Hero */
+
 .hero {
   position: relative;
   height: 70vh;
@@ -40,14 +43,19 @@ img {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
   overflow: hidden;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.8),
+    rgba(15, 23, 42, 0.4)
+  );
 }
 
 .hero__content {
@@ -98,6 +106,8 @@ main {
   flex: 1;
 }
 
+/* Sektionen */
+
 .section {
   padding: 5rem 7vw;
 }
@@ -121,24 +131,26 @@ main {
   color: var(--text-secondary);
 }
 
+/* Galerie – einfache Grid-Galerie mit Originalseitenverhältnissen */
+
 .gallery {
   max-width: 1200px;
   margin: 2rem auto 0;
-  /* WICHTIG: KEIN overflow, KEIN max-height, KEIN display:grid/flex */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
 }
 
 .gallery__link {
   display: block;
-  overflow: hidden;      /* für den runden Rahmen beim Hover */
-  border-radius: 12px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-/* Hier KEIN height:100% und KEIN object-fit */
 .gallery__image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+  width: 100%;
+  height: auto;          /* Seitenverhältnis bleibt erhalten */
+  border-radius: 16px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -148,6 +160,7 @@ main {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
+/* Links */
 
 .links {
   display: grid;
@@ -184,6 +197,8 @@ main {
   font-size: 1rem;
 }
 
+/* Footer */
+
 .footer {
   background: var(--bg-dark);
   color: #e2e8f0;
@@ -191,6 +206,8 @@ main {
   padding: 2rem 1rem;
   font-size: 0.95rem;
 }
+
+/* Responsive */
 
 @media (max-width: 600px) {
   .section {
@@ -204,9 +221,5 @@ main {
   .hero__subtitle {
     letter-spacing: 0.3rem;
     font-size: 0.8rem;
-  }
-
-  .gallery {
-    max-height: 60vh;
   }
 }
