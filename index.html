@@ -120,6 +120,27 @@
     });
   }
 </script>
-  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"></script>
+
+<script>
+  $(function () {
+    $('.gallery').justifiedGallery({
+      rowHeight: 260,      // "Zielhöhe" der Reihen (Flickr-artig, dynamisch)
+      margins: 8,          // Abstand zwischen Bildern
+      lastRow: 'nojustify',
+      captions: false
+    });
+
+    if (window.lightbox) {
+      lightbox.option({
+        resizeDuration: 200,
+        wrapAround: true
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
