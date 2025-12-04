@@ -9,6 +9,8 @@
   font-size: 16px;
 }
 
+/* Reset */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +18,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--text-primary);
   background-color: var(--bg-light);
   line-height: 1.6;
@@ -28,8 +30,9 @@ body {
 img {
   max-width: 100%;
   display: block;
-  border-radius: 18px;
 }
+
+/* Hero */
 
 .hero {
   position: relative;
@@ -40,14 +43,19 @@ img {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background: url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
   overflow: hidden;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.8),
+    rgba(15, 23, 42, 0.4)
+  );
 }
 
 .hero__content {
@@ -98,6 +106,8 @@ main {
   flex: 1;
 }
 
+/* Sektionen */
+
 .section {
   padding: 5rem 7vw;
 }
@@ -121,31 +131,36 @@ main {
   color: var(--text-secondary);
 }
 
+/* Galerie – JustifiedGallery Container
+   WICHTIG: kein display:grid / flex / max-height / overflow hier! */
+
 .gallery {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  align-items: stretch;
+  max-width: 1200px;
+  margin: 2rem auto 0;
 }
 
-.gallery__item {
-  background: #fff;
-  border-radius: 22px;
-  padding: 1.2rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Einträge optisch leicht abrunden + Hover-Effekt, ohne das Layout von JustifiedGallery zu zerstören */
+
+.gallery__link {
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-.gallery__item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 32px 60px rgba(15, 23, 42, 0.22);
+.gallery__image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.gallery__item figcaption {
-  margin-top: 1rem;
-  font-weight: 500;
-  color: var(--text-primary);
+.gallery__link:hover .gallery__image,
+.gallery__link:focus .gallery__image {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
+
+/* Links */
 
 .links {
   display: grid;
@@ -182,6 +197,8 @@ main {
   font-size: 1rem;
 }
 
+/* Footer */
+
 .footer {
   background: var(--bg-dark);
   color: #e2e8f0;
@@ -189,6 +206,8 @@ main {
   padding: 2rem 1rem;
   font-size: 0.95rem;
 }
+
+/* Responsive */
 
 @media (max-width: 600px) {
   .section {
