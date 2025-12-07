@@ -1,17 +1,23 @@
-# Beispiel-Portfolio für Fotografie & Videografie
+# Portfolio - Vivien Reuter (GitHub Pages Mirror)
 
-Dieses Repository enthält eine einfache Beispielseite, auf der du dein fotografisches Portfolio vorstellen kannst. Die Startseite besteht aus drei Hauptbereichen:
+Dieses Repository ist die technische Ablage meiner persönlichen Portfolio-Website. Es bleibt ausschliesslich deshalb öffentlich, weil GitHub Pages eine public codebase voraussetzt. Es ist **kein Template** und nicht fuer die Nutzung durch Dritte bestimmt; Issues und Pull Requests werden grundsätzlich geschlossen.
 
-- **Hero-Bereich** mit einer kurzen Vorstellung und einem Call-to-Action.
-- **Private Highlights** – eine Galerie mit Bild-Platzhaltern, die du durch eigene Aufnahmen ersetzt.
-- **Professionelle Projekte** – Karten mit Links zu deinem Instagram-Profil und zu einer externen Projektseite aus deiner Werksstudententätigkeit.
+## Zweck des Repos
+- Build-Artefakte und Seiteninhalte versionieren.
+- Über GitHub Actions automatisch auf Pages deployen.
+- Einen transparenten Änderungsverlauf für meine eigene Arbeit halten.
 
-## Nutzung
+## Struktur & Tools
+- `index.html` - statische Seite mit Hero, Galerie und (optional) Link-Section.
+- `styles.css` - responsives Layout, Typografie, Galerie-Styles.
+- `images/` - eigene Fotos (Originale + Thumbnails).
+- Externe Bibliotheken: jQuery, JustifiedGallery, Lightbox2 (per CDN).
 
-1. Öffne die Datei `index.html` und passe Texte, Links und Bilder an.
-2. Optional kannst du das Styling in `styles.css` weiter individualisieren.
-3. Stelle die Dateien auf deinem Webspace bereit oder nutze einen statischen Hosting-Dienst (z.&nbsp;B. GitHub Pages, Netlify).
+## Medien & Urheberrecht
+- Sämtliche Fotos und Videos stammen von mir selbst. Sie sind ausschließlich zur Darstellung auf der entsprechenden Pages-Domain bestimmt.
+- Eine Weiterverwendung, Vervielfältigung oder Ableitung ist ohne meine schriftliche Freigabe untersagt.
+- Bitte keine Kopien aus diesem Repo anlegen, keine Assets extrahieren und keine Code-Snippets fuer eigene Zwecke übernehmen.
 
-## Vorschau
-
-Öffne `index.html` direkt im Browser, um eine lokale Vorschau der Seite zu erhalten.
+## Lizenz & Nutzung
+- Medieninhalte sind vollständig urheberrechtlich geschützt.
+- Dritte sollen dieses Repo nur ansehen, um die fertige Website einzusehen; jede andere Nutzung bedarf meiner Zustimmung.
