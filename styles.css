@@ -208,7 +208,7 @@ main {
 }
 
 .footer__link {
-  color: #fbbf24;
+  color: var(--accent);
   text-decoration: none;
   margin-left: 0.75rem;
   font-weight: 600;
